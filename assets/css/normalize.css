@@ -1,0 +1,111 @@
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+  background-color: #383e56;
+}
+
+
+button,
+html input[type="button"], /* 1 */
+ {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+
+
+.container .row > ul {
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  color: #fffaf7;
+
+}
+
+.container .row  #navimg{
+  /*padding-top: 1%;*/
+  display: inline-block;
+  width: 40%;
+  padding-right: 5%;
+}
+
+.container .modelchoice
+{
+  padding-top: 2%;
+text-align: center;
+}
+
+
+.container .modelchoice button
+{
+  color: #1b1c25;
+text-align: center;
+border-radius: 7px;
+margin: 7px;
+height: 6%;
+background-color: #ff9595;
+font-size: 15px;
+}
+/*
+.container .modelchoice .select_model_btn
+{
+text-align: center;
+border-radius: 7px;
+padding-left: 2
+background-color: orange;
+}
+*/
+/*
+.row #live-view #mask_img{
+  height: 100%;
+
+  width: 100%;
+  opacity: 70%;
+
+}*/
+
+/*
+.Uploadyourmodel{
+  display: none;
+
+  position: absolute;
+  padding-left: 51%;
+  padding-top: 2px;
+  top: 94%;
+}
+
+.Uploadyourmodel #change_upload,#clearbtn{
+  background-color: #89c9b8;
+width: 150px;
+}*/
+
+
+
+
+
+
+
+
+
+
+

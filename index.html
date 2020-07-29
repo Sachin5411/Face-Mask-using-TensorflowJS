@@ -1,0 +1,108 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Face Mask Detection</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/skeleton.css">
+  <link rel="stylesheet" href="popOutPg.css">
+
+  <style>
+    .container {
+      max-width: 640px;
+      max-height: 480px;
+    }
+
+    #live-view{
+
+      background: url('mask.svg') no-repeat ;
+      height: 480px;
+      width: 640px;
+      background-size: 640px 480px;
+      /*background-color:rgba(0, 0, 0, 0.5);*/
+    }
+    .webcam-view {
+      
+      position: absolute;
+      top:  110%;
+      height: 162%;
+      /*border: 3.5px solid #000;*/
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+
+</head>
+<body>
+  <div class=bg-popOutPg>
+    <div class="popOutPg">
+        <div class="leftBox">
+            <div class="lbTextBox">
+                <div class="lbtbHead">Face Mask Detection</div>
+                <!-- <div class="lbtbLink"><i class="far fa-heart"></i><i class="fas fa-share-alt"></i></div> -->
+                <div class="lbtbSec">Color your way through the palettes of famous paintings</div>
+                <div class="lbtbBtn">Launch experiment</div>
+            </div>
+        </div>
+        <div class="rightBox"></div>
+    </div>
+</div>
+  <div class="container">
+
+    <div class="row">
+      <ul>
+            <li> <img id="navimg" src="logo.svg" /> </li>
+            <li style="font-size: 1.5vw; padding-top: -10px" >  presents</li>
+            <!-- <br/> -->
+            <li style="font-size: 3.5vw; font-weight: bolder;">MASK IT &#x1F637;N</li>
+        </ul>
+      
+    </div>
+    <div class= "modelchoice">
+      <input type="file" id="modelUpload" name="modelFilepath" hidden="hidden" value="Upload Your Model" accept=".json">
+      <button  class="select_model_btn" id="user-upload">Upload Your Model</button>
+      <button onclick="pretrainedmodel()">Use Pre-trained Model</button>
+
+
+    </div>
+
+    <div class="row">
+      <div id="live-view" class="column webcam-view">
+        <!-- <img id="mask_img"style="height: 100%;width: 100%;opacity: 70%" src="fmd.png"> -->
+        <video id="video" width="640" height="480" playsinline style="
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          width: auto;
+          /*z-index: 9999;*/
+          height: auto;">
+        </video>
+        <canvas id="output"></canvas>
+      </div>
+    </div>
+ </div>
+
+<div class="row">
+      <div class="column">
+        <p style="background:#fbc7c7;margin-left: 31.2%;margin-right: 31.1%" id="loading-model"></p>
+      </div>
+    </div>
+
+     <!-- <div class="Uploadyourmodel">
+
+  <input  type="button" id="change_upload" value="Upload Model" onclick="upload_model()">
+  <input type="button" value="Clear" id ="clearbtn" class="button" onclick="clearmodel();" />
+</div> -->
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
