@@ -115,6 +115,18 @@ html input[type="button"] /* 1 */
 
 }
 
+.container .row >ul >li#pname{
+  font-size: 3.5vw; 
+  font-weight: bolder;
+}
+
+.container .row ul li #present{
+  font-size: 1.3vw; 
+  /*font-weight: bolder;*/
+}
+
+
+
 .container .row  #navimg{
   /*padding-top: 1%;*/
   display: inline-block;
