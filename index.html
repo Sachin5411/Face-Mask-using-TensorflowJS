@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="assets/css/skeleton.css">
   <link rel="stylesheet" href="popOutPg.css">
 
-  <style>
+  <!-- <style>
     .container {
       max-width: 640px;
       max-height: 480px;
@@ -17,8 +17,8 @@
     #live-view{
 
       background: url('mask.svg') no-repeat ;
-      height: 480px;
-      width: 640px;
+      max-height: 480px;
+      max-width: 640px;
       background-size: 640px 480px;
       /*background-color:rgba(0, 0, 0, 0.5);*/
     }
@@ -35,8 +35,8 @@
       top: 0;
       left: 0;
       z-index: 999;
-    }
-  </style>
+    }s
+  </style> -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
@@ -75,27 +75,23 @@
 
 
     </div>
+    <!-- <div class="row"> -->
+      <div class="info-block">
+        <p style="background:#fbc7c7;" id="loading-model"></p>
+      <!-- </div> -->
+    </div>
 
-    <div class="row">
-      <div id="live-view" class="column webcam-view">
+   <!--  <div class="row"> -->
+      <div id="live-view"  class="column webcam-view">
         <!-- <img id="mask_img"style="height: 100%;width: 100%;opacity: 70%" src="fmd.png"> -->
-        <video id="video" width="640" height="480" playsinline style="
-          -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-          width: auto;
-          /*z-index: 9999;*/
-          height: auto;">
+        <video id="video"  playsinline>
         </video>
         <canvas id="output"></canvas>
       </div>
-    </div>
+    <!-- </div> -->
  </div>
 
-<div class="row">
-      <div class="column">
-        <p style="background:#fbc7c7;margin-left: 31.2%;margin-right: 31.1%" id="loading-model"></p>
-      </div>
-    </div>
+
 
      <!-- <div class="Uploadyourmodel">
 

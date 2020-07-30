@@ -231,8 +231,10 @@ upload_model();
 // }
 
 function pretrainedmodel(){
+
   loadingModel.innerHTML=""
-  loadingModel.innerHTML="Using Pre-trained Model"
+  loadingModel.innerHTML="Using Pre-trained Model";
+  document.getElementById('live-view').style.cssText = 'background-size: 0 0;position: relative;height: 42%;width: 55%;margin-left : 22%;';
   main();
 }
 

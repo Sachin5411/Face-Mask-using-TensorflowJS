@@ -11,20 +11,93 @@ html {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
+        width: 100%;
+      height: 100%;
 }
 
+
+
+body {
+  margin: 1%;
+  background-color: #383e56;
+}
 /**
  * Remove default margin.
  */
 
-body {
-  margin: 0;
-  background-color: #383e56;
+.container {
+      width: 100%;
+      height: 100%;
+    }
+
+
+.container .info-block{
+ margin-left: 22%;
+  margin-right: 23%;
+  /*line-height: 0;*/
+
+}
+
+.container  #live-view{
+  position: relative;
+  background: url('/mask.svg') no-repeat ;
+
+/*  max-height: 480px;
+  max-width: 640px;*/
+  height: 42%;
+  width: 55%;
+  margin-left : 22%;
+  background-size: 100% 100%;
+  /*background-color:rgba(0, 0, 0, 0.5);*/
+}
+.container .webcam-view {
+  
+  position: relative;
+  padding: 0;
+  width: 55%;
+  height: 42%;
+  /*padding-right: 17%;*/
+  /*top:  110%;
+  height: 162%;*/
+  /*border: 3.5px solid #000;*/
+}
+
+.container .webcam-view video{
+  
+  position: relative;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          width: 100%;
+          /*z-index: 9999;*/
+          height: auto;
+  /*padding: 0;*/
+  /*width: 200px;
+  height: 200px;*/
+  /*border: 10px solid black;*/
+  /*padding-right: 17%;*/
+  /*top:  110%;
+  height: 162%;*/
+  /*border: 3.5px solid #000;*/
+}
+
+.container #live-view canvas {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  /*padding-left: 17%;*/
 }
 
 
+
+
+
+
+
 button,
-html input[type="button"], /* 1 */
+html input[type="button"] /* 1 */
  {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
@@ -64,7 +137,7 @@ border-radius: 7px;
 margin: 7px;
 height: 6%;
 background-color: #ff9595;
-font-size: 15px;
+font-size: 100%;
 }
 /*
 .container .modelchoice .select_model_btn
@@ -98,6 +171,7 @@ background-color: orange;
   background-color: #89c9b8;
 width: 150px;
 }*/
+
 
 
 
