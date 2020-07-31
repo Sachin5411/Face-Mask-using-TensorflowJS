@@ -1,10 +1,4 @@
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
 
 html {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -18,7 +12,7 @@ html {
 
 
 body {
-  margin: 1%;
+  margin: 0.5%;
   background-color: #383e56;
 }
 /**
@@ -56,10 +50,7 @@ body {
   padding: 0;
   width: 55%;
   height: 42%;
-  /*padding-right: 17%;*/
-  /*top:  110%;
-  height: 162%;*/
-  /*border: 3.5px solid #000;*/
+
 }
 
 .container .webcam-view video{
@@ -68,16 +59,9 @@ body {
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
           width: 100%;
-          /*z-index: 9999;*/
+
           height: auto;
-  /*padding: 0;*/
-  /*width: 200px;
-  height: 200px;*/
-  /*border: 10px solid black;*/
-  /*padding-right: 17%;*/
-  /*top:  110%;
-  height: 162%;*/
-  /*border: 3.5px solid #000;*/
+
 }
 
 .container #live-view canvas {
@@ -87,13 +71,8 @@ body {
   top: 0;
   left: 0;
   z-index: 999;
-  /*padding-left: 17%;*/
+
 }
-
-
-
-
-
 
 
 button,
@@ -151,38 +130,7 @@ height: 6%;
 background-color: #ff9595;
 font-size: 100%;
 }
-/*
-.container .modelchoice .select_model_btn
-{
-text-align: center;
-border-radius: 7px;
-padding-left: 2
-background-color: orange;
-}
-*/
-/*
-.row #live-view #mask_img{
-  height: 100%;
 
-  width: 100%;
-  opacity: 70%;
-
-}*/
-
-/*
-.Uploadyourmodel{
-  display: none;
-
-  position: absolute;
-  padding-left: 51%;
-  padding-top: 2px;
-  top: 94%;
-}
-
-.Uploadyourmodel #change_upload,#clearbtn{
-  background-color: #89c9b8;
-width: 150px;
-}*/
 
 
 
