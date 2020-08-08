@@ -44,7 +44,7 @@ async function loadMaskDetectionModel() {
   console.log("loading mask detection model");
 
   console.log("using pre-trained model")
-  await tf.loadLayersModel('model.json').then(m => {
+  await tf.loadLayersModel(web_url_for_model+'model.json').then(m => {
     maskDetectionModel = m;
     console.log("Pre trained mask detection model loaded");
   });
@@ -102,15 +102,15 @@ async function renderPrediction() {
       if (predictions.length > 0) {
         if (predictions[0] > decisionThreshold) {
           faceBoxStyle = "rgba(0, 255, 0, 0.25)";
-          label = `Mask Found: ${Math.floor(predictions[0] * 1000) / 10}%`;
+          label = `Mask: ${Math.floor(predictions[0] * 1000) / 10}%`;
         } else {
-          label = `No Mask Found : ${Math.floor(predictions[1] * 1000) / 10}%`;
+          label = `No Mask: ${Math.floor(predictions[1] * 1000) / 10}%`;
         }
 
         // Render label and its box
         canvasCtx.fillStyle = "rgba(255, 111, 0, 0.85)";
         canvasCtx.fillRect(start[0], start[1] - 23, size[0], 23);
-        canvasCtx.font = "18px Raleway";
+        canvasCtx.font = "15px Raleway";
         canvasCtx.fillStyle = "rgba(255, 255, 255, 1)";
         canvasCtx.fillText(label, end[0] + 5, start[1] - 5);
       }

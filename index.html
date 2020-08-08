@@ -1,5 +1,6 @@
 <html>
 <head>
+
   <meta charset="utf-8">
   <title>Face Mask Detection</title>
 
@@ -41,16 +42,30 @@
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
-
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-price-tags" viewBox="0 0 40 32">
+<path d="M38.5 0h-12c-0.825 0-1.977 0.477-2.561 1.061l-14.879 14.879c-0.583 0.583-0.583 1.538 0 2.121l12.879 12.879c0.583 0.583 1.538 0.583 2.121 0l14.879-14.879c0.583-0.583 1.061-1.736 1.061-2.561v-12c0-0.825-0.675-1.5-1.5-1.5zM31 12c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"></path>
+<path d="M4 17l17-17h-2.5c-0.825 0-1.977 0.477-2.561 1.061l-14.879 14.879c-0.583 0.583-0.583 1.538 0 2.121l12.879 12.879c0.583 0.583 1.538 0.583 2.121 0l0.939-0.939-13-13z"></path>
+</symbol>
+</defs>
+</svg>
 </head>
 <body>
   <div class=bg-popOutPg>
     <div class="popOutPg">
         <div class="leftBox">
             <div class="lbTextBox">
-                <div class="lbtbHead">Face Mask Detection</div>
+                <div class="lbtbHead">Face Mask Detection </div>
                 <!-- <div class="lbtbLink"><i class="far fa-heart"></i><i class="fas fa-share-alt"></i></div> -->
-                <div class="lbtbSec">Color your way through the palettes of famous paintings</div>
+                <div class="lbtbSec"><h3>This project detects whether the person in camera is
+wearing a mask or not. Sounds exciting?<br>Then, Try it yourself!</h3>
+
+<h3 style="color: #737070;font-weight: 900;"><u><strong>Working </strong></u><br>Click on Use Default Model and allow the camera access. It is as
+simple as that! (Also, You can also upload your own model in json format and
+the project will work on your model! Fascinating Right?) Don’t worry, and just
+use the default one if you are a newb!</h3><h5 style="color: #0f4c75"> <svg class="icon icon-price-tags"><use xlink:href="#icon-price-tags"></use></svg> CNN, Neural Networks, Resnet50, Tensorflowjs</h5>
+</div>
                 <div class="lbtbBtn">Launch experiment</div>
             </div>
         </div>
@@ -71,7 +86,7 @@
     <div class= "modelchoice">
       <input type="file" id="modelUpload" name="modelFilepath" hidden="hidden" value="Upload Your Model" accept=".json">
       <button  class="select_model_btn" id="user-upload">Upload Your Model</button>
-      <button onclick="pretrainedmodel()">Use Pre-trained Model</button>
+      <button onclick="pretrainedmodel()">Use Default Model</button>
 
 
     </div>
